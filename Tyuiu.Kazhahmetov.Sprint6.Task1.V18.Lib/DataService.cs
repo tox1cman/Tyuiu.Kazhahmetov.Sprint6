@@ -6,10 +6,10 @@ namespace Tyuiu.Kazhahmetov.Sprint6.Task1.V18.Lib
         public double[] GetMassFunction(int startValue, int stopValue)
         {
             double y;
-            int len = stopValue - startValue;
+            int len = stopValue - startValue + 1;
             double[] res = new double[len];
             int cnt = 0;
-            for (int i = startValue; i < stopValue; i++)
+            for (int i = startValue; i < stopValue + 1; i++)
             {
                 y = (2 * Math.Sin(i))/(3 * i + 1.2) + Math.Cos(i) - 7 * i * 2;
                 y = Math.Round(y, 2);
