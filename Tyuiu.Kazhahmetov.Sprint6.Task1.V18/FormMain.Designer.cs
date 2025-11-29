@@ -151,6 +151,7 @@
             Controls.Add(buttonInfo);
             Controls.Add(textBoxEnd);
             Controls.Add(textBoxStart);
+            ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "FormMain";
