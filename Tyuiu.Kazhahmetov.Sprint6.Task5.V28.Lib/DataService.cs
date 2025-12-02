@@ -25,7 +25,7 @@ namespace Tyuiu.Kazhahmetov.Sprint6.Task5.V28.Lib
                 {
                     if (line.Contains(","))
                     {
-                        line = line.Replace(",", ".");
+                        
                         data[index] = Math.Round(Convert.ToDouble(line), 3);
                     }
                     else
