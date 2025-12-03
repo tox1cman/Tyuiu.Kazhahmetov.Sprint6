@@ -5,22 +5,26 @@ namespace Tyuiu.Kazhahmetov.Sprint6.Task6.V14.Lib
     {
         public string CollectTextFromFile(string path)
         {
-            string str = "z";
-
-            string res_str = "";
-
-            using (StreamReader sr = new StreamReader(path))
+            string res = "";
+            using (StreamReader read = new StreamReader(path))
             {
                 string line;
-                while ((line = sr.ReadLine()) != null)
+                while ((line = read.ReadLine()) != null)
                 {
-                    if (line.Contains(str))
+                    if (line.Contains(" "))
                     {
-                        res_str = res_str + " " + line;
+                        line.Split(" ");
+                        foreach (string part in line.Split())
+                        {
+                            if (part.Contains("z"))
+                            { 
+                                res += part + " ";
+                            }
+                        }
                     }
                 }
             }
-            return res_str;
+            return res.TrimEnd();
         }
     }
 }
