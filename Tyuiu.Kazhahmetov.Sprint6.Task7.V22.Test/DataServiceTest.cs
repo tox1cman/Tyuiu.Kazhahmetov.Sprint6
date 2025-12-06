@@ -11,7 +11,6 @@ namespace Tyuiu.Kazhahmetov.Sprint6.Task7.V22.Test
             string path = @"C:\DataSprint6\InPutDataFileTask7V22.csv";
             int[,] res = ds.GetMatrix(path);
             CollectionAssert.AreEqual(res, res);
-
         }
     }
 }
